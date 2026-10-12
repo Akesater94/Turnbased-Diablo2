@@ -10,5 +10,5 @@ CREATE TABLE IF NOT EXISTS characters (
     user_id INT NOT NULL,
     name VARCHAR(50) NOT NULL,
     char_data JSON,
-    FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );

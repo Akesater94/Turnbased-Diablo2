@@ -1,0 +1,543 @@
+@font-face {
+    font-family: 'DiabloFont';
+    src: url('../Assets/fonts/films.EXL_____.ttf') format('truetype');
+    font-display: swap;
+}
+
+body {
+    font-family: 'DiabloFont', serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: brown;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+}
+
+.start-button {
+    color: brown;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 3em;
+}
+/* 
+.buttons-container {
+    border: 1px solid black;
+} */
+
+.hub-nav {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 2px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.button {
+    width: 100px;
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+table,
+td {
+    border: 1px solid #1a1a1a;
+    text-align: center;
+}
+
+.combatants-window {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#player-damage {
+    display: none;
+}
+
+#kill-window {
+    display: none;
+}
+
+.hub {
+    background: url(/../Assets/images/act1hub.jpg);
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#player-inventory-container {
+    position: fixed;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.cancel-merchant-button{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#merchant-inventory-container{
+    position: fixed;
+    left: 15%;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+#equipment-container {
+    position: fixed; 
+    top: 10px;
+    left: 57%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; 
+}
+
+#inventory-container{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    right: 15%;
+    top: 20%;
+}
+
+#player-inventory {
+    pointer-events: auto; 
+    border-collapse: collapse;
+    background-color: rgba(10, 10, 10, 0.9);
+    border: 2px solid #3d2b1f;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.8); 
+}
+
+#merchant-inventory {
+    pointer-events: auto; 
+    border-collapse: collapse;
+    background-color: rgba(10, 10, 10, 0.9);
+    border: 2px solid #3d2b1f;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.8); 
+}
+
+#equipment {
+    pointer-events: auto; 
+    border-collapse: collapse;
+    background-color: rgba(10, 10, 10, 0.9);
+    border: 2px solid #3d2b1f;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.8); 
+}
+
+
+.inventory-item {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #1a1a1a;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 0;
+}
+
+.item-image {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+    filter: drop-shadow(0 0 2px black);
+}
+
+.tooltip {
+    visibility: hidden;
+    position: fixed;
+    pointer-events: none;
+    width: 180px;
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid #5e3a24;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.inventory-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.inventory-item:hover .tooltip
+{
+    visibility: visible;
+}
+
+.item-name {
+    color: white; 
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-type {
+    color: #999;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.magic-stat {
+    color: #4850b8;
+    margin-top: 5px;
+}
+
+/*######################################CHAR WINDOW STYLING#############################################*/
+
+#character-window-container {
+    display: none;
+    position: fixed;
+    bottom: 35%;
+    left: 15%; 
+    pointer-events: none;
+}
+
+
+#character-window {
+    pointer-events: auto;
+    background-color: rgba(20, 20, 20, 0.95);
+    border: 3px solid #3d2b1f;
+    border-collapse: collapse;
+    min-width: 220px; 
+    box-shadow: 0 0 30px rgba(0,0,0,1);
+}
+
+
+#character-window td {
+    padding: 6px 10px; 
+    color: #999;
+    font-size: 0.7rem; 
+    border-bottom: 1px solid #1a1a1a;
+    text-transform: uppercase;
+}
+
+
+#character-window td:nth-child(2) {
+    color: #fff;
+    text-align: right;
+    font-weight: bold;
+    width: 50px; 
+}
+
+
+.add-point-btn {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+#character-window tr td[colspan], 
+#character-window tr td:only-child {
+    text-align: center;
+    letter-spacing: 2px;
+    color: #3d2b1f;
+}
+
+.add-stats {
+    display: none; 
+}
+
+/* #inner-health-orb{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: darkred;
+    z-index: 1;
+}
+
+
+
+#outer-health-orb{
+    width: 100px;
+    position: relative;
+    height: 100px;
+    border-radius: 50%;
+    border: solid 3px black;
+    background-color: transparent;
+    z-index: 9000 !important;
+} */
+
+#inner-health-orb {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    
+    /* Matches the deep, centered crimson look from your reference */
+    background: radial-gradient(
+        circle at 50% 50%, 
+        #b30000 0%,   
+        #800000 40%,  
+        #4d0000 75%,  
+        #1a0000 95%,  
+        #000000 100% 
+    );
+    
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.9);
+    transition: height 0.3s ease-out;
+}
+
+#outer-health-orb {
+    /* Critical changes for screen positioning */
+    position: fixed;   /* Sticks to the screen regardless of scroll */
+    bottom: 20px;      /* Gap from the bottom edge */
+    left: 25%;        /* Gap from the left edge */
+    
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #1a1a1a; 
+    background-color: #000;
+    z-index: 9999;     /* High z-index to ensure it sits on top of other elements */
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(150, 0, 0, 0.4);
+}
+
+#potion{
+    position: absolute;
+    bottom: 10px;
+    left:34%;
+}
+
+.potion-image{
+    width: 50px;
+    height: 50px;
+}
+
+#monster-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+
+    img{
+        padding: 20px;
+        background: black;
+        border: 1px solid #74793f;
+    }
+}
+
+#hp-bar-outer {
+    width: 200px;
+    height: 25px;
+    background-color: #220000; 
+    border: 2px solid #3d2b1f; 
+    position: relative;
+    margin: 10px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#hp-bar-inner {
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(to bottom, #880000, #631717, #880000); 
+}
+
+#combatZone{
+    background: url(/../Assets/images/combatZoneBackgroundTake2.jpg);
+    background-size: contain;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#monster-name {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.8rem;
+    text-shadow: 1px 1px 2px black;
+    pointer-events: none;
+}
+
+.exp-bar-container {
+    width: 200px;
+    height: 20px;
+    background-color: #31331b;
+    border: 1px solid #3d2b1f;
+    position: relative;
+    margin: 5px auto;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+#home-button{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    img{
+        background: transparent;
+        height: 100px;
+        width: 70px;
+    }
+}
+
+.exp-bar-filler {
+    width: 0%; 
+    height: 100%;
+    background: linear-gradient(to bottom, #d0d2b3, #74793f); 
+    transition: width 0.4s ease-out;
+}
+
+#exp-bar-text{
+    position: absolute;
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
+#waypoint{
+    width: 100px;
+    height: 70px;
+    display: block;
+    margin: auto;
+    filter: drop-shadow(0 0 2px black);
+}
+
+#inventory-image{
+    width: 100px;
+    height: 70px;
+    display: block;
+    margin: auto;
+    filter: drop-shadow(0 0 2px black);
+}
+
+#charsi{
+    width: 40px;
+    height: 60px;
+    display: block;
+    margin: auto;
+    background-color: black;
+}
+
+.areas-table{
+    background-color: gray;
+    display: none;
+}
+
+.class-option{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 10px 0 10px;
+}
+
+.class-option label{
+    width: 140px;
+    height: 300px;
+}
+
+.class-option img{
+    padding: 20px;
+    height: 200px;
+    width: 100px;
+}
+
+.charcontainer img{
+    padding: 0px 20px 0px 20px;
+    height: 120px;
+    width: 70px;
+}
+
+.charcontainer{
+    border-bottom: 1px solid rgb(83, 83, 40);
+}
+
+.list-of-characters{
+    border: 1px solid rgb(83, 83, 40);
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.text-box{
+    height: 120px;
+    width: 200px;
+    border-right:  1px solid rgb(83, 83, 40);
+}
+
+#create-character{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+}
+
+.delete-button{
+    margin: 10px;
+}
+
+.class-option input[type="radio"] {
+    position: absolute;
+    display:none;
+    width: 0;
+    height: 0;
+}
+
+.class-option input[type="radio"]:checked + img {
+    outline: 3px solid #b8860b; /* Gold/Brown border */
+    box-shadow: 0 0 15px rgba(184, 134, 11, 0.7); /* Glow effect */
+    filter: brightness(1.2); /* Make it pop */
+    cursor: pointer;
+}
+
+form:has(input[type="radio"]:checked) .input-section-create-char {
+    display: flex;
+}
+
+.input-section-create-char {
+    display: none;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.classes{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}

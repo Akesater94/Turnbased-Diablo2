@@ -5,7 +5,7 @@ Despite all it's flaws, I had so much fun with this project and I think that's w
 
 ## Setup
   -Install Laragon from here: https://laragon.org/download  
-  -Download the repository and put the "tbd2" folder inside Laragons "www" folder. Example: C:/Laragon/www  
+  -Download the repository and put the "tbd2" folder inside Laragons "www" folder. Example: C:/Laragon/www/  
   -Start the laragon application, ignore and close any license key prompts.  
   -Press "Start all" on the bottom left corner of the laragon application.  
   -go to "http://localhost/tbd2/public/" in your web browser and get going :)
@@ -33,7 +33,4 @@ Despite all it's flaws, I had so much fun with this project and I think that's w
   None of the playable classes have skills.  
 
 ## Final note
-  Please don't tell blizzard I used their assets. 
-  
-  
-  
+  Please don't tell blizzard I am using their assets. 

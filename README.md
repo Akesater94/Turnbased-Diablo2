@@ -1,14 +1,15 @@
 # Turnbased/Idle diablo 2.
-During a course in php I started this as a side project along our school assignments. There was no plan, no clear idea of what I wanted this project to be. It was a playground for me to test out some things i learned during the course and it just grew. Most of the time I was not fully grasping what I was doing. I was just piling it on top of the already existing code. Similiar to how my two year old daugther plays with her wooden blocks. Eventhough the project is small, it is has an incredible technical debt to it. Trying to implement new features is a dauting task to me now since I haven't touched it in almost 6months.
+During a course in php in the spring of 2026, I started this side project along our school assignments. There was no plan, no clear idea of what I wanted this project to be. It was a playground for me to test out some things i learned during the course and it just grew. Most of the time I was not fully grasping what I was doing. I was just piling new functions and code on top of the already (bloated) existing code. Similiar to how my two year old daugther plays with her wooden blocks. Eventhough the project is small, it is has an incredible technical debt to it. Trying to implement new features is a daunting task since I haven't touched it in almost six months.
 
-Despite all it's flaws, I had so much fun with this project and I think that's why I wanted to share it here. If I ever have a reason to get into PHP and JS again I will revisit this project to either burn most of it to the ground and start over or to try and restructure what is there.
+Despite all it's flaws, I had so much fun with this project and I think that's why I wanted to share it here. If I ever have a reason to get into PHP and JS again I will revisit this project to either burn most of it to the ground and start over or to try and restructure and refactor what is already there.
 
 ## Setup
   -Install Laragon from here: https://laragon.org/download  
-  -Download the repository and put the "tbd2" folder inside Laragons "www" folder. Example: C:/Laragon/www/  
+  -Download the repository and extract the "tbd2-main" folder to Laragons "www" folder. Remove "-main" from the folder name.  
+  -Example: C:/Laragon/www/tbd2  
   -Start the laragon application, ignore and close any license key prompts.  
   -Press "Start all" on the bottom left corner of the laragon application.  
-  -go to "http://localhost/tbd2/public/" in your web browser and get going :)
+  -Go to "http://localhost/tbd2/public/" in your web browser and get going :)
   
 ## How do I play?  
   Make an account and login. Create a character and you will be placed in the town area.  
@@ -33,4 +34,4 @@ Despite all it's flaws, I had so much fun with this project and I think that's w
   None of the playable classes have skills.  
 
 ## Final note
-  Please don't tell blizzard I am using their assets. 
+  Please don't tell blizzard that I am using their assets. 

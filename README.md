@@ -8,8 +8,7 @@ Despite all it's flaws, I had so much fun with this project and I think that's w
   -Download the repository and put the "tbd2" folder inside Laragons "www" folder. Example: C:/Laragon/www  
   -Start the laragon application, ignore and close any license key prompts.  
   -Press "Start all" on the bottom left corner of the laragon application.  
-  -go to "http://localhost/tbd2/public/" in your web browser.  
-  ### PLAY!  
+  -go to "http://localhost/tbd2/public/" in your web browser and get going :)
   
 ## How do I play?  
   Make an account and login. Create a character and you will be placed in the town area.  
@@ -25,5 +24,16 @@ Despite all it's flaws, I had so much fun with this project and I think that's w
 ## When outside town  
   Press space to start fightning monsters  
   Press the potions icon to heal up  
-  Press the town portal icon in the bottomleft corner to get back to town.
+  Press the town portal icon in the bottom left corner to get back to town.
+
+## Features that are missing and aren't "bugs"
+  You cannot die in combat.  
+  There is no currency, you simply trade items with the shopkeeper.  
+  The energy stat doesn't change any of the players stats so it is basically useless (kind of like real d2 if you're not playing a pesky sorc).  
+  None of the playable classes have skills.  
+
+## Final note
+  Please don't tell blizzard I used their assets. 
+  
+  
   

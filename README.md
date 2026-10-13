@@ -27,10 +27,10 @@ Despite all it's flaws, I had so much fun with this project and I think that's w
   Press the town portal icon in the bottom left corner to get back to town.
 
 ## Features that are missing and aren't "bugs"
-  You cannot die in combat.
-  There is no currency, you simply trade items with the shopkeeper.
-  The energy stat doesn't change any of the players stats so it is basically useless (kind of like real d2 if you're not playing a pesky sorc).
-  None of the playable classes have skills.
+  You cannot die in combat.  
+  There is no currency, you simply trade items with the shopkeeper.  
+  The energy stat doesn't change any of the players stats so it is basically useless (kind of like real d2 if you're not playing a pesky sorc).  
+  None of the playable classes have skills.  
 
 ## Final note
   Please don't tell blizzard I used their assets. 

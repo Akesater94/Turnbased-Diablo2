@@ -87,7 +87,7 @@ td {
 }
 
 .hub {
-    background: url(/../Assets/images/act1hub.jpg);
+    background: url(../Assets/images/act1hub.jpg);
     background-color: black;
     background-size: contain;
     background-repeat: no-repeat;
@@ -373,7 +373,7 @@ td {
 }
 
 #combatZone{
-    background: url(/../Assets/images/combatZoneBackgroundTake2.jpg);
+    background: url(../Assets/images/combatZoneBackgroundTake2.jpg);
     background-size: contain;
     background-color: black;
     background-repeat: no-repeat;
